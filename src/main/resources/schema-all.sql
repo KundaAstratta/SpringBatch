@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION trigger_set_timestamp()
 RETURNS TRIGGER AS $$
 BEGIN
-  NEW.updated_at = NOW();
+  NEW.update_date_time = NOW();
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
@@ -30,8 +30,9 @@ CREATE TABLE collaborateur (
        localisation_collaborateur VARCHAR(200),
        pj VARCHAR(200),
 	   a_migrer VARCHAR(200),
-	   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+	   create_date_time TIMESTAMP NOT NULL DEFAULT NOW(),
+       update_date_time TIMESTAMP NOT NULL DEFAULT NOW()
+
 );
 
 

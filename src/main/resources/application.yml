@@ -4,7 +4,7 @@ spring:
       enabled: true
     initialize-schema: always
   datasource:
-    url: jdbc:postgresql://localhost/collector_collaborator
+    url: jdbc:postgresql://localhost/postgres
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: ChSep2019
