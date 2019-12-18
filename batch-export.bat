@@ -1,1 +1,0 @@
-java -jar target/springbatch.demo-0.0.1-SNAPSHOT.jar --spring.batch.job.names=export-job output-file=src\main\resources\sample2-data.csv
