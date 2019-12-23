@@ -113,8 +113,8 @@ public class ImportJobConfig {
 
         return new JdbcBatchItemWriterBuilder<CollaboratorDTO>()
                 .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-               .sql("INSERT INTO collaborateur (uid, civilite, nom, prenom, fonction, telephone, mail, etage, uo_affectation, code_immeuble_emplacement_collaborateur, region, code_region, niveau_territoire, code_territoire, niveau_entite, code_entite, niveau_agence, code_agence, localisation_collaborateur, pj, a_migrer) " +
-                       "VALUES (:uid, :civilite, :nom, :prenom, :fonction, :telephone, :mail, :etage, :uoAffectation, :codeImmeubleEmplacementCollaborateur, :region, :codeRegion, :niveauTerritoire, :codeTerritoire, :niveauEntite, :codeEntite, :niveauAgence, :codeAgence, :localisationCollaborateur, :pj, :aMigrer)")
+               .sql("INSERT INTO collaborateur (uid, civilite, nom, prenom, fonction, telephone, mail, etage, uo_affectation, code_immeuble_emplacement_collaborateur, region, code_region, niveau_territoire, code_territoire, niveau_entite, code_entite, niveau_agence, code_agence, localisation_collaborateur, pj, a_migrer, create_date_time, update_date_time) " +
+                       "VALUES (:uid, :civilite, :nom, :prenom, :fonction, :telephone, :mail, :etage, :uoAffectation, :codeImmeubleEmplacementCollaborateur, :region, :codeRegion, :niveauTerritoire, :codeTerritoire, :niveauEntite, :codeEntite, :niveauAgence, :codeAgence, :localisationCollaborateur, :pj, :aMigrer, now(), now())")
                 .dataSource(dataSource)
                 .build();
 
