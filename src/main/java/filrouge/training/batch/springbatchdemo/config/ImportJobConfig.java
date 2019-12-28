@@ -74,6 +74,7 @@ public class ImportJobConfig {
 
     @StepScope
     @Bean
+    //    public FlatFileItemReader<BookDto> importReader(@Value("#{jobParameters['input-file']}") final String inputFile) {
     public FlatFileItemReader<CollaboratorDTO> importReader(@Value("src/main/resources/input-data.csv") final String inputFile) {
 
             return new FlatFileItemReaderBuilder<CollaboratorDTO>()
